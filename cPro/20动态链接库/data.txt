@@ -1,0 +1,52 @@
+二.动态库的编译及使用
+
+同样的hello.c 源码
+
+1.生成.o文件
+
+gcc -c -fpic hello.c //如果这里没有加-fpic 下一步就会提示你重新用 -fpic编译
+
+2. 编译成动态库
+
+gcc -shared -fpic -o libhello.so hello.o
+
+-shared 是生成动态库
+
+-fpic 生成位置无关代码,默认加
+
+ 
+
+3. 使用动态库 和静态库一样
+
+gcc main.c -L. -lhello -o a.out
+
+ 
+
+4. 执行　用动态库编译的程序没办法直接执行
+
+在读取共享库libhello.so的时候出错,没有找到该文件
+
+因为动态库程序会默认在 /lib  或者 /usr/lib的路径下寻找, 所以
+
+ 
+
+ 
+
+解决的办法有3个:
+
+1. 将.so 文件拷贝到 /usr/lib/文件夹下面
+
+2.添加PATH环境变量
+
+export LD_LIBRARY_PATH=<动态库所在的绝对路径>
+
+3.修改配置脚本
+
+将动态库所在的路径加到  /etc/ld.so.conf 文件里
+
+vim /etc/ld.so.conf
+
+添加后刷新
+
+/sbin/ldconfig
+

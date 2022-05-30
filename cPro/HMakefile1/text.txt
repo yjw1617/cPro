@@ -1,0 +1,27 @@
+*1.Make工程管理器是一个“自动编译管理器”，自动体现在哪里？
+*2.一个Makefile的基本结构由哪几部分组成？命令的前边应该注意什么问题？
+**3.有以下代码，编写一个makefile实现
+文件fun1.c :
+#include
+void myprintf1()
+{
+printf("fun1!\n");
+}
+文件fun2.c:
+#include
+void myprintf2()
+{
+printf("fun2!\n");
+}
+文件head.h：
+void myprintf1();
+void myprintf2();
+文件fun.c：
+#include "head.h"
+int main(int argc, const char *argv[])
+{
+myprintf1();
+myprintf2();
+return 0;
+}
+编写的makefile如下：

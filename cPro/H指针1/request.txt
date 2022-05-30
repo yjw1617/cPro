@@ -1,0 +1,14 @@
+1.已有定义int k=2,*p1,*p2;且p1与p2均已指向变量k,下面不能执行的语句是（B）
+A.k=*p1+*p2; B.p2=k; C.p1=p2; D.k=*p1*(*p2);
+2.int *p1,*P2;假如p1指向内存地址为0x10的位置p2指向内存地址是0x14的位置那么下列说法正确的是（B）
+A.(p1+1)指向内存地址为0x11的位置 B.(p1+1)指向内存地址为0x14的位置
+C.p2-p1=4 D. p2-p1的结果是一个地址
+3.int a[5][4],*p=&a[0][0];则*(p+2*4+3)等价于（D）
+A.a[2][0] B.a[2][1] C.a[2][2] D.a[2][3]
+4.下列语法错误的是（没有语法错误）
+A.int a,b,*pa=&a,*pb=&b; if(pa>pb) puts(“Yes”);
+B. int a,b,*pa=&a,*pb=&b; if(*pa>*pb) puts(“Yes”);
+C. int a,b,*pa=&a,*pb=&b; if(pa-pb) puts(“Yes”);
+D. int a,*pa=&a; char b,*pb=&b; if(pa>pb) puts(“Yes”);
+5. int a[5][4];那么a[2]表示（D）
+A.a[2][0] B.&a[0][0]-32 C.a+32 D.&a[0][0]+8

@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "limits.h": "c",
+        "p1.h": "c",
+        "p4.h": "c",
+        "input.h": "c",
+        "view.h": "c",
+        "tools.h": "c",
+        "calculation.h": "c",
+        "treelink.h": "c",
+        "cstdlib": "cpp",
+        "type_traits": "c",
+        "doublelist.h": "c",
+        "string.h": "c"
+    }
+}
